@@ -1,0 +1,441 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 11140,
+      "max": [
+        12.991411209106445,
+        8.920125007629395,
+        10.401802062988281
+      ],
+      "min": [
+        -14.198188781738281,
+        -7.9177446365356445,
+        -10.52529525756836
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 133680,
+      "componentType": 5126,
+      "count": 11140,
+      "max": [
+        0.9998812079429626,
+        0.9999430179595947,
+        0.9999933242797852
+      ],
+      "min": [
+        -0.9982853531837463,
+        -0.9995182156562805,
+        -0.9995600581169128
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 11140,
+      "max": [
+        0.9981101155281067,
+        0.9989873766899109,
+        0.9997315406799316,
+        1.0
+      ],
+      "min": [
+        -0.9999164342880249,
+        -0.999613344669342,
+        -0.9998526573181152,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 11140,
+      "max": [
+        0.9899215698242188,
+        0.9912395477294922
+      ],
+      "min": [
+        0.008760452270507813,
+        0.008760452270507813
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 89120,
+      "componentType": 5126,
+      "count": 11140,
+      "max": [
+        0.9899215698242188,
+        0.9912395477294922
+      ],
+      "min": [
+        0.008760452270507813,
+        0.008760452270507813
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 42591,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 267360,
+      "componentType": 5126,
+      "count": 12270,
+      "max": [
+        0.9884577989578247,
+        0.9884577989578247,
+        -0.521419882774353
+      ],
+      "min": [
+        -0.9884577989578247,
+        -0.9884577989578247,
+        -3.029489755630493
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 414600,
+      "componentType": 5126,
+      "count": 12270,
+      "max": [
+        0.9999982118606567,
+        0.9999982118606567,
+        1.0
+      ],
+      "min": [
+        -0.9999982118606567,
+        -0.9999982118606567,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 178240,
+      "componentType": 5126,
+      "count": 12270,
+      "max": [
+        0.9306005835533142,
+        0.9791442155838013
+      ],
+      "min": [
+        0.04834126681089401,
+        0.06205873191356659
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 170364,
+      "componentType": 5125,
+      "count": 67584,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Numbian (https://sketchfab.com/numbian)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/plate-with-small-sandwitches-3c60a71b1e034fde8329b1dacbd2d2e4",
+      "title": "Plate with small sandwitches"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 440700,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 276400,
+      "byteOffset": 440700,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 561840,
+      "byteOffset": 717100,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 178240,
+      "byteOffset": 1278940,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1457180,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/Snack_diffuse.png"
+    },
+    {
+      "uri": "textures/Snack_normal.png"
+    },
+    {
+      "uri": "textures/plate_diffuse.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "diffuseTexture": {
+            "index": 0
+          },
+          "glossinessFactor": 0.4394825164620689,
+          "specularFactor": [
+            0.0321109145188455,
+            0.0321109145188455,
+            0.0321109145188455
+          ]
+        }
+      },
+      "name": "Snack",
+      "normalTexture": {
+        "index": 1,
+        "scale": 0.1780350704388061
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "diffuseTexture": {
+            "index": 2
+          },
+          "glossinessFactor": 0.7799722136086435,
+          "specularFactor": [
+            0.6097273650353562,
+            0.6097273650353562,
+            0.6097273650353562
+          ]
+        }
+      },
+      "name": "plate"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LOW_Snack_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "plate_plate_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "5569cec16b4743b29eeaf6ae7b1c87b5.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.9528728812509173,
+        0.07331087699645288,
+        0.7257122912883252,
+        0.0,
+        0.40424663447289083,
+        0.940713983804361,
+        -0.6258130500662237,
+        0.0,
+        -0.607138812682647,
+        0.7414058334474647,
+        0.7222876120360506,
+        0.0,
+        -0.7598130702972412,
+        1.215704083442688,
+        0.15152208507061005,
+        1.0
+      ],
+      "name": "LOW"
+    },
+    {
+      "mesh": 0,
+      "name": "LOW_Snack_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        20.02924346923828,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -3.263177953712703e-06,
+        -20.02924346923802,
+        0.0,
+        0.0,
+        0.4237227737903539,
+        -6.903320217971667e-08,
+        0.0,
+        -0.1732708215713501,
+        1.2214199304580688,
+        -0.6127707958221436,
+        1.0
+      ],
+      "name": "plate"
+    },
+    {
+      "mesh": 1,
+      "name": "plate_plate_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

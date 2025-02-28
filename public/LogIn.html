@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="logstyle.css">
+</head>
+<body>
+<div class="maindiv">
+
+<div class="boxdiv" id="popup1"  style="visibility: hidden;opacity: 0;">
+	<div class="popup" >
+		<h2>Here i am</h2>
+		<a class="close" id="close1" href="#">&times;</a>
+		<div class="content" id="co">
+			Thank to pop me out of that button, but now i'm done so you can close this window.
+		</div>
+	</div>
+</div>
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="#">
+            <h1>Create Account</h1>
+            <span>use your email for registration</span>
+            <div class="w" id="nameError"></div>
+            <input type="text" placeholder="Name" id="name" />
+            <div class="w" id="emailError"></div>
+            <input type="email" placeholder="Email"  id="email"/>
+            <div class="w" id="passwordError"></div>
+            <input type="password" placeholder="Password" id="password" />
+            <div class="w" id="addressError"></div>
+            <input type="text" placeholder="Adress" id="adress" />
+            <button id="reg" >Sign Up  <div class="lds-facebook" id="ed" style="display: none;"><div></div><div></div><div></div></div>
+            </button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Sign in</h1>
+            <span> use your account</span>
+            <div class="w" id="errorlogemail"></div>
+            <input type="email" placeholder="Email" id="logemail"/>
+            <div class="w" id="errorlogpassword"></div>
+            <input type="password" placeholder="Password" id="logpassword"/>
+            <a href="#">Forgot your password?</a>
+            <button id="log">Sign In <div class="lds-facebook" id="d" style="display: none;"><div></div><div></div><div></div></div></button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            
+            <div class="overlay-panel overlay-left">
+                <h1 style="font-size: 30px; ">RUSL kitchen </h1>
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1 style="font-size: 30px; ">RUSL kitchen </h1>
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+	const close = document.getElementById('close1');
+	const close2 = document.getElementById('popup1');
+
+  
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+        console.log("sssssssss");
+    });
+  
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+        console.log("dddddddddd");
+    });
+	close.addEventListener('click', () => {
+		document.getElementById('popup1').style.visibility="hidden";
+			document.getElementById('popup1').style.opacity="0";
+    });
+	close2.addEventListener('click', () => {
+		document.getElementById('popup1').style.visibility="hidden";
+			document.getElementById('popup1').style.opacity="0";
+    });
+
+</script>
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+	import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
+	import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+	import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+
+	
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyCXEGyizt5sEvUKFTSaceyzNOBvDvkpFSw",
+    authDomain: "the-rusl-kitchen.firebaseapp.com",
+    projectId: "the-rusl-kitchen",
+    storageBucket: "the-rusl-kitchen.appspot.com",
+    messagingSenderId: "801611132679",
+    appId: "1:801611132679:web:1472652350e8a2c67edfa2",
+    measurementId: "G-P3JMMX87CP"
+  };
+
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
+	const db=getDatabase();
+	const auth= getAuth(app);
+    const firestore = getFirestore(app);
+
+	const register = document.getElementById('reg');
+    const login = document.getElementById('log');
+
+
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log(user);
+            // User is signed in, redirect to the home page or perform any other action
+                 }});
+	register.addEventListener('click', () => {
+		let email = document.getElementById('email');
+        let progress = document.getElementById('ed');
+		let password = document.getElementById('password');
+      
+        let name = document.getElementById('name');
+let address = document.getElementById('adress');
+        document.getElementById('nameError').textContent = '';
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('passwordError').textContent = '';
+        document.getElementById('addressError').textContent = '';
+
+
+        // Validate fields
+        if (name.value.trim() === '') {
+            document.getElementById('nameError').textContent = 'Name cannot be empty';
+            document.getElementById('name').style.outline = '1px solid red';
+            return;
+        }
+
+        if (email.value.trim() === '') {
+            document.getElementById('emailError').textContent = 'Email cannot be empty';
+            document.getElementById('email').style.outline = '1px solid red';
+            return;
+        }
+
+        if (password.value.trim() === '') {
+            document.getElementById('passwordError').textContent = 'Password cannot be empty';
+            document.getElementById('password').style.outline = '1px solid red';
+            return;
+        }
+        else{
+            progress.style.display='inline';
+            createUserWithEmailAndPassword(auth, email.value, password.value).then((result) => {
+			console.log(result);
+            const userDocRef = doc(firestore, 'users', result.user.uid); // Assuming 'users' is your Firestore collection
+        const userData = {
+            time: new Date(),
+            auth:result.user.uid,
+          email: email.value,
+          password:password.value,
+          address:address.value,
+          name:name.value
+          // Add more user data as needed
+        };
+
+        setDoc(userDocRef, userData)
+          .then(() => {
+            progress.style.display='none';
+            console.log('User data added to Firestore');
+            var newUrl = "file:///C:/Users/samar/Videos/rusl%20-%20Copy/public/index.html" + "?auth=" + encodeURIComponent(result.user.uid);
+            window.location.href = newUrl;
+          })
+          .catch((error) => {
+            progress.style.display='none';
+            console.error('Error adding user data to Firestore: ', error);
+          });
+			document.getElementById('popup1').style.visibility="visible";
+			document.getElementById('popup1').style.opacity="1";
+            const co = document.getElementById('co');
+            co.textContent = 'Sucsess fully Created User Account'; 
+			
+		}).catch((error) => {
+            
+            progress.style.display='none';
+			console.log(error);
+			document.getElementById('popup1').style.visibility="visible";
+			document.getElementById('popup1').style.opacity="1";
+            
+    const co = document.getElementById('co');
+            
+    co.textContent = error; 
+		});
+
+        }
+        
+    });
+    login.addEventListener('click', () => {
+        let progress2 = document.getElementById('d');
+		let logemail = document.getElementById('logemail');
+		let logpassword = document.getElementById('logpassword');
+        document.getElementById('errorlogemail').textContent = '';
+        document.getElementById('errorlogpassword').textContent = '';
+
+        // Validate fields
+        if (logemail.value.trim() === '') {
+            document.getElementById('errorlogemail').textContent = 'Email cannot be empty';
+            document.getElementById('logemail').style.outline = '1px solid red';
+            return;
+        }
+
+        if (logpassword.value.trim() === '') {
+            document.getElementById('errorlogpassword').textContent = 'Password cannot be empty';
+            document.getElementById('logpassword').style.outline = '1px solid red';
+            return;
+        }
+        else{
+            progress2.style.display='inline';
+            signInWithEmailAndPassword(auth, logemail.value, logpassword.value)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log('User logged in:', user);
+                    // Redirect to the home page or perform any other action
+                    progress.style.display='none';
+            console.log('User data added to Firestore');
+            var newUrl = "file:///C:/Users/samar/Videos/rusl%20-%20Copy/public/index.html" + "?auth=" + encodeURIComponent(result.user.uid);
+            window.location.href = newUrl;
+        
+                    progress.style.display='none';
+                })
+                .catch((error) => {
+                    console.error('Error signing in:', error.message);
+                    document.getElementById('popup1').style.visibility="visible";
+			document.getElementById('popup1').style.opacity="1";
+            progress2.style.display='none';
+            
+    const co = document.getElementById('co');
+            
+    co.textContent = error; 
+                });
+	
+
+        }
+        
+    });
+  </script>
+
+</body>
+</html>

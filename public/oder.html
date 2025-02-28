@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="oder.css">
+    <title>order</title>
+</head>
+<body>
+    <div class="boxdiv" id="popup1"  style="visibility: hidden;opacity: 0;">
+    <div class="popup" >
+		<a class="close" id="close1" href="#">&times;</a>
+		<div class="content" id="co">
+			Thank to pop me out of that button, but now i'm done so you can close this window.
+		</div>
+	</div>
+    </div>
+    <div class="container" id="container">
+        <div id="display"></div>
+    <div id="searchResults"></div>
+    <button id="reg" >Add Oder</button>
+
+    </div>
+    
+
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+        import { getFirestore, collection, query, where, getDocs, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            // Your Firebase configuration
+            apiKey: "AIzaSyCXEGyizt5sEvUKFTSaceyzNOBvDvkpFSw",
+            authDomain: "the-rusl-kitchen.firebaseapp.com",
+            projectId: "the-rusl-kitchen",
+            storageBucket: "the-rusl-kitchen.appspot.com",
+            messagingSenderId: "801611132679",
+            appId: "1:801611132679:web:1472652350e8a2c67edfa2",
+            measurementId: "G-P3JMMX87CP"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const firestore = getFirestore(app);
+
+         let querarystring=window.location.search;
+         let urlphram=new URLSearchParams(querarystring);
+         let vs=urlphram.get('id');
+         let sd=urlphram.get('auth');
+         console.log(vs);
+        const searchResultsContainer = document.getElementById('searchResults');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const order = document.getElementById('reg');
+          const collectionName = 'menueOder'; // Replace with your actual collection name
+            // Perform a query to find documents where the 'name' field matches the search term
+            const q = query(collection(firestore, collectionName), where('menueid', '==', vs));
+
+            getDocs(q)
+                .then((querySnapshot) => {
+                    searchResultsContainer.innerHTML = ''; // Clear previous results
+
+                    if (querySnapshot.size > 0) {
+                        querySnapshot.forEach((doc) => {
+                            const data = doc.data();
+                            const name = data.title; // Replace 'name' with the actual field name in your document
+                            const img = data.img;   // Replace 'img' with the actual field name in your document
+                            const description = data.discription; // Replace 'description' with the actual field name in your document
+
+                            // Display the results
+                            searchResultsContainer.innerHTML += `
+                                <h1> ${name}</h1>
+                                <img class="fill-image" src=${img} alt="Your Image Description">
+                                <p> </p>
+                                <p>Description: ${description}</p>
+                               
+                            
+                            `;
+                        });
+                    } else {
+                        searchResultsContainer.innerHTML = '<p>No matching documents found.</p>';
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error performing query:', error);
+                });
+
+                order.addEventListener('click', () => {
+    // Assuming 'users' is your Firestore collection
+
+    // Add your logic here to be executed when the 'order' button is clicked
+    const userDocRef = doc(firestore, 'orders', sd);
+    const userData = {
+        time: new Date(),
+        auth: sd,
+        orderid: vs,
+        received: "NO",
+        // Add more user data as needed
+    };
+
+    setDoc(userDocRef, userData)
+        .then(() => {
+
+            console.log('User data added to Firestore');
+            document.getElementById('popup1').style.visibility="visible";
+			document.getElementById('popup1').style.opacity="1";
+            const co = document.getElementById('co');
+            co.textContent = 'Successfully Placed Order'; 
+            // Add more actions if needed
+        })
+        .catch((error) => {
+           
+            console.log('Error adding user data to Firestore: ', error);
+            document.getElementById('popup1').style.visibility="visible";
+			document.getElementById('popup1').style.opacity="1";
+            const co = document.getElementById('co');
+            co.textContent = error; 
+            // Add error handling actions if needed
+        });
+});
+
+    </script>
+</body>
+
+</html>

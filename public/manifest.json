@@ -1,0 +1,27 @@
+{
+    "name": "Your App Name",
+    "short_name": "App Short Name",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "192.jpeg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "512.jpeg",
+        "sizes": "512x512",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "512.jpeg", 
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable" 
+      }
+    ]
+  }
+  

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Plate with small sandwitches
+* source:	https://sketchfab.com/3d-models/plate-with-small-sandwitches-3c60a71b1e034fde8329b1dacbd2d2e4
+* author:	Numbian (https://sketchfab.com/numbian)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Plate with small sandwitches" (https://sketchfab.com/3d-models/plate-with-small-sandwitches-3c60a71b1e034fde8329b1dacbd2d2e4) by Numbian (https://sketchfab.com/numbian) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
