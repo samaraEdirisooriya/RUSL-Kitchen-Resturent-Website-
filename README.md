@@ -16,6 +16,8 @@ This project showcases my front-end development skills, including:
 
 ### 🎥 Project Demo  
 ![Project Preview](1.gif)  
+![Project Preview](2.gif)  
+![Project Preview](3.gif) 
 
 ### 🚀 Features  
 ✅ Smooth parallax scrolling effect  
