@@ -15,7 +15,7 @@ This project showcases my front-end development skills, including:
 - Basic Login System  
 
 ### 🎥 Project Demo  
-![Project Preview](foldername/demo.gif)  
+![Project Preview](1.gif)  
 
 ### 🚀 Features  
 ✅ Smooth parallax scrolling effect  
