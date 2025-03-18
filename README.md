@@ -1,7 +1,7 @@
 # 🚀 University Project - Interactive UI with Parallax Scrolling & Dark Mode  
 
 ## 🎓 Rajarata University of Sri Lanka  
-[📄 **View Full Project Proposal Here**](ICT-1108-Group-05-Project-Proposal.pdf) 
+[📄 **View Full Project Proposal Here**](ICT1108-Group05-ProjectProposal.pdf) 
 ### 📌 About the Project  
 This project showcases my front-end development skills, including:  
 - 🌄 **Parallax Scrolling** for a smooth scrolling effect  
